@@ -1,0 +1,13 @@
+# Format Style Options - Created with Clang Power Tools
+---
+BasedOnStyle: Google
+AccessModifierOffset: -2
+AlignAfterOpenBracket: AlwaysBreak
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: Always
+ColumnLimit: 90
+IncludeBlocks: Preserve
+MaxEmptyLinesToKeep: 2
+ReflowComments: false
+SpacesBeforeTrailingComments: 1
+...
