@@ -1,3 +1,7 @@
-#include <iostream>
+#include "Solve.h"
+#include "pch.h"
 
-int main() { std::cout << "Hello Worldd\n"; }
+int main() {
+  Solve mSolve("input.txt"s, "output.txt"s);
+  mSolve.SolveProblem();
+}
