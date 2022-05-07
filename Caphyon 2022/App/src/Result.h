@@ -8,7 +8,7 @@ public:
 
 private:
   const char SHIP = '0';
-  const int NotFound = -1;
+  const int inexistent = -1;
   int mLength, mLeftPointer, mRightPointer;
   std::string mPlanet;
   int GetNextShip(const int& aPos);

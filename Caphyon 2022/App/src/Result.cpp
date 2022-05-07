@@ -4,7 +4,7 @@
 Result::Result(int aLength, std::string aPlanet)
     : mLength(aLength), mLeftPointer(INT_MIN), mPlanet(aPlanet) {
   mRightPointer = GetNextShip(0);
-  if (mRightPointer == NotFound) throw Error::mErrorCodes::noShips;
+  if (mRightPointer == inexistent) throw Error::mErrorCodes::noShips;
 }
 
 long long Result::GenerateResult() {
@@ -14,14 +14,14 @@ long long Result::GenerateResult() {
       mLeftPointer = mRightPointer;
       mRightPointer = GetNextShip(i + 1);
     } else {
-      if (mLeftPointer != NotFound && mLeftPointer != INT_MIN &&
-          mRightPointer != NotFound) {
+      if (mLeftPointer != inexistent && mLeftPointer != INT_MIN &&
+          mRightPointer != inexistent) {
         ans += std::min(
             (long long)((mRightPointer - i) * (mPlanet[i] - '0')),
             (long long)((i - mLeftPointer) * (mPlanet[i] - '0')));
-      } else if (mLeftPointer != NotFound && mLeftPointer != INT_MIN) {
+      } else if (mLeftPointer != inexistent && mLeftPointer != INT_MIN) {
         ans += (long long)((i - mLeftPointer) * (mPlanet[i] - '0'));
-      } else if (mRightPointer != NotFound) {
+      } else if (mRightPointer != inexistent) {
         ans += (long long)((mRightPointer - i) * (mPlanet[i] - '0'));
       } else {
         throw Error::mErrorCodes::unexpectedError;
@@ -35,5 +35,5 @@ int Result::GetNextShip(const int& aPos) {
   for (int i = aPos; i < mLength; i++) {
     if (mPlanet[i] == SHIP) return i;
   }
-  return NotFound;
+  return inexistent;
 }

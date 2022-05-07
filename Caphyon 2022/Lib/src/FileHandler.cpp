@@ -2,7 +2,7 @@
 #include "pch.h"
 
 FileHandler::FileHandler(
-    const std::string aInputFileName, const std::string aOutputFileName) {
+    const std::string& aInputFileName, const std::string& aOutputFileName) {
   mInputFile.open(aInputFileName);
   if (!mInputFile) { throw Error::mErrorCodes::invalidFile; }
   mOutputFile.open(aOutputFileName);

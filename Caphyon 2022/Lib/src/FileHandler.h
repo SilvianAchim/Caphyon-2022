@@ -4,7 +4,7 @@
 
 class FileHandler {
 public:
-  FileHandler(const std::string aInputFileName, const std::string aOutputFileName);
+  FileHandler(const std::string& aInputFileName, const std::string& aOutputFileName);
   template <typename T>
   void ReadFromFile(T& aVar);
   ~FileHandler();
