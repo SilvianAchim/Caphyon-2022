@@ -18,6 +18,6 @@ template <typename T>
 void FileHandler::ReadFromFile(T& aVar) {
   if (mInputFile >> aVar) {
   } else {
-    throw Error::noInput;
+    throw Error::mErrorCodes::noInput;
   }
 }

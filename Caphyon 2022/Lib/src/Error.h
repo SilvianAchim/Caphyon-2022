@@ -2,6 +2,6 @@
 
 class Error {
 public:
-  enum mErrorCodes { invalidFile = 330, noInput = 331, invalidInput = 332 };
+  enum class mErrorCodes { invalidFile, noInput, invalidInput };
   void InterpretError(const Error::mErrorCodes& aErrorCode);
 };
