@@ -2,8 +2,7 @@
 #include "Error.h"
 
 Result::Result(int aLength, std::string aPlanet)
-    : mLength(aLength), mLeftPointer(INT_MIN) {
-  mPlanet = aPlanet; // ? -- Clang error
+    : mLength(aLength), mLeftPointer(INT_MIN), mPlanet(aPlanet) {
   mRightPointer = GetNextShip(0);
   if (mRightPointer == NotFound) throw Error::mErrorCodes::noShips;
 }
@@ -18,12 +17,12 @@ long long Result::GenerateResult() {
       if (mLeftPointer != NotFound && mLeftPointer != INT_MIN &&
           mRightPointer != NotFound) {
         ans += std::min(
-            long long((mRightPointer - i) * (mPlanet[i] - '0')),
-            long long((i - mLeftPointer) * (mPlanet[i] - '0')));
+            (long long)((mRightPointer - i) * (mPlanet[i] - '0')),
+            (long long)((i - mLeftPointer) * (mPlanet[i] - '0')));
       } else if (mLeftPointer != NotFound && mLeftPointer != INT_MIN) {
-        ans += long long((i - mLeftPointer) * (mPlanet[i] - '0'));
+        ans += (long long)((i - mLeftPointer) * (mPlanet[i] - '0'));
       } else if (mRightPointer != NotFound) {
-        ans += long long((mRightPointer - i) * (mPlanet[i] - '0'));
+        ans += (long long)((mRightPointer - i) * (mPlanet[i] - '0'));
       } else {
         throw Error::mErrorCodes::unexpectedError;
       }
