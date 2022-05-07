@@ -1,17 +1,17 @@
 #include "Solve.h"
 #include "FileHandler.h"
-#include "Solver.h"
+#include "Result.h"
 #include "pch.h"
 
 Solve::Solve(std::string aInputFileName, std::string aOutputFileName)
     : mFileHandler(std::make_unique<FileHandler>(aInputFileName, aOutputFileName)),
-      mLength(1) {}
+      mLength(0) {}
 
 void Solve::SolveProblem() {
   try {
     ReadInput();
-    Solver solver(mLength, mPlanet);
-    std::cout << solver.GenerateResult();
+    Result result(mLength, mPlanet);
+    std::cout << result.GenerateResult();
   } catch (const Error::mErrorCodes& aErrorCode) {
     Error error;
     error.InterpretError(aErrorCode);

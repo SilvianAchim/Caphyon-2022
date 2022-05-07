@@ -2,6 +2,8 @@
 #include "pch.h"
 
 int main() {
-  Solve mSolve("input.txt"s, "output.txt"s);
+  std::string inputFile = "input.txt";
+  std::string outputFile = "output.txt";
+  Solve mSolve(inputFile, outputFile);
   mSolve.SolveProblem();
 }
