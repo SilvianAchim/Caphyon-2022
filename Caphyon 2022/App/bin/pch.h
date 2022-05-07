@@ -1,4 +1,5 @@
 #pragma once
+#include <climits>
 #include <fstream>
 #include <iostream>
 #include <memory>

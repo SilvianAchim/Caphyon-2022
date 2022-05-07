@@ -13,6 +13,12 @@ void Error::InterpretError(const Error::mErrorCodes& aErrorCode) {
       std::cout << "Error while reading from the input file. File may be empty or does "
                    "not contain all the elements!";
       break;
+    case Error::mErrorCodes::noShips:
+      std::cout << "The linearo-planet has no ships. Ask Elon Musk to send one ship!";
+      break;
+    case Error::mErrorCodes::unexpectedError:
+      std::cout << "An unkowned error occured!";
+      break;
     default:
       std::cout << "An unkowned error occured!";
       break;

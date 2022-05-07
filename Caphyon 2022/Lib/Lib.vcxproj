@@ -162,13 +162,11 @@
     <ClInclude Include="bin\pch.h" />
     <ClInclude Include="src\Error.h" />
     <ClInclude Include="src\FileHandler.h" />
-    <ClInclude Include="src\Test.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bin\pch.cpp" />
     <ClCompile Include="src\Error.cpp" />
     <ClCompile Include="src\FileHandler.cpp" />
-    <ClCompile Include="src\Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

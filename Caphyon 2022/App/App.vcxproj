@@ -172,11 +172,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bin\pch.cpp" />
+    <ClCompile Include="src\Solver.cpp" />
     <ClCompile Include="src\Solve.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bin\pch.h" />
+    <ClInclude Include="src\Solver.h" />
     <ClInclude Include="src\Solve.h" />
   </ItemGroup>
   <ItemGroup>

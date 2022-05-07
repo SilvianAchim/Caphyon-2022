@@ -24,12 +24,18 @@
     <ClCompile Include="src\Solve.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Solver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bin\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Solve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Solver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
