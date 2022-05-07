@@ -10,6 +10,6 @@ public:
 
 private:
   std::unique_ptr<FileHandler> mFileHandler;
-  int mLength = 0;
+  unsigned int mLength;
   std::string mPlanet;
 };

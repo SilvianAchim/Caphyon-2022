@@ -1,4 +1,5 @@
 #pragma once
+#include "Error.h"
 #include "pch.h"
 
 class FileHandler {
@@ -17,6 +18,6 @@ template <typename T>
 void FileHandler::ReadFromFile(T& aVar) {
   if (mInputFile >> aVar) {
   } else {
-    throw "Error while reading from the input file. File may be empty or does not contain all the elements!"s;
+    throw Error::noInput;
   }
 }

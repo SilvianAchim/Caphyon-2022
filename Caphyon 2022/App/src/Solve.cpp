@@ -4,16 +4,17 @@
 
 Solve::Solve(std::string aInputFileName, std::string aOutputFileName)
     : mFileHandler(std::make_unique<FileHandler>(aInputFileName, aOutputFileName)),
-      mLength(0),
-      mPlanet("") {}
+      mLength(0) {}
 
 void Solve::SolveProblem() {
+  Error error;
   try {
     ReadInput();
-  } catch (std::string error) { std::cout << error << std::endl; }
+  } catch (const Error::mErrorCodes& aErrorCode) { error.InterpretError(aErrorCode); }
 }
 
 void Solve::ReadInput() {
   mFileHandler->ReadFromFile(mLength);
   mFileHandler->ReadFromFile(mPlanet);
+  if (mPlanet.size() != mLength) { throw Error::invalidInput; }
 }

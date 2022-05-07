@@ -14,22 +14,26 @@ void fun(T& var) {
       throw "Error while reading from file. File may be empty!"s;
     }
   } else
-    throw "Error while opening the inputfile. File may not exist!"s;
+    throw "Error while opening the input file. File may not exist!"s;
 }
 
-void inner_mad() { throw std::exception(); }
-
-void mad() { auto ptr = std::make_unique<int>(); }
+class Errors {
+public:
+  enum TareFrate { invalidCeva = 100, valid = 200 };
+};
 
 int main() {
-  /*int n;
-  string s;
-  try {
-    fun(n);
-    fun(s);
-    cout << n << "\n" << s << " -ok\n";
-  } catch (string ceva) { cout << ceva << "\n"; }*/
-  cout << "Salut\n";
-  mad();
-  cout << "Salut iara\n";
+  int i = 99;
+  Errors err;
+  switch (i) {
+    case err.invalidCeva:
+      cout << "Fraer\n";
+      break;
+    case err.valid:
+      cout << "Gaga\n";
+      break;
+    default:
+      cout << "An unkowned error has occured!\n";
+      break;
+  }
 }

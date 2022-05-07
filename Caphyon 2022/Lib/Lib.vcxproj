@@ -73,18 +73,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\debug</OutDir>
+    <IntDir>.\bin</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\debug</OutDir>
+    <IntDir>.\bin</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\debug</OutDir>
+    <IntDir>.\bin</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\debug</OutDir>
+    <IntDir>.\bin</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -156,11 +160,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="bin\pch.h" />
+    <ClInclude Include="src\Error.h" />
     <ClInclude Include="src\FileHandler.h" />
     <ClInclude Include="src\Test.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bin\pch.cpp" />
+    <ClCompile Include="src\Error.cpp" />
     <ClCompile Include="src\FileHandler.cpp" />
     <ClCompile Include="src\Test.cpp" />
   </ItemGroup>
