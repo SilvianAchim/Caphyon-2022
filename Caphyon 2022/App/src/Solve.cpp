@@ -21,5 +21,4 @@ void Solve::SolveProblem() {
 void Solve::ReadInput() {
   mFileHandler->ReadFromFile(mLength);
   mFileHandler->ReadFromFile(mPlanet);
-  if (mPlanet.size() != mLength) { throw Error::mErrorCodes::invalidInput; }
 }

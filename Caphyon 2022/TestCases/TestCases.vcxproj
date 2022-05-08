@@ -163,6 +163,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Tester.cpp" />
     <ClCompile Include="src\TestFileHandler.cpp" />
+    <ClCompile Include="src\TestResult.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App\App.vcxproj">
@@ -176,6 +177,7 @@
     <ClInclude Include="bin\pch.h" />
     <ClInclude Include="src\Tester.h" />
     <ClInclude Include="src\TestFileHandler.h" />
+    <ClInclude Include="src\TestResult.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

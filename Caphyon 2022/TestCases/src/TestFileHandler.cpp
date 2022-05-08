@@ -15,7 +15,7 @@ std::string TestFileHandler::RunTests() {
 }
 
 std::string TestFileHandler::OpenInputFile() {
-  std::string randomOutput = "testtttt.txt";
+  std::string randomOutput = "src/TestFiles/testtttt.test";
   try { // Test 1
     FileHandler test("src/TestFiles/testInput0.txt", randomOutput);
     return "Test failed: FileHandler test 1 | FileHandler failed to return an error "

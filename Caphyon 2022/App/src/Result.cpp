@@ -4,6 +4,7 @@
 Result::Result(int aLength, std::string aPlanet)
     : mLength(aLength), mLeftPointer(INT_MIN), mPlanet(aPlanet) {
   mRightPointer = GetNextShip(0);
+  if (mPlanet.size() != mLength) throw Error::mErrorCodes::invalidInput;
   if (mRightPointer == inexistent) throw Error::mErrorCodes::noShips;
 }
 
