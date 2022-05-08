@@ -12,5 +12,9 @@ public:
     invalidOutputFile,
     noError
   };
-  std::string InterpretError(const Error::mErrorCodes& aErrorCode);
+  Error();
+  std::string InterpretError(const mErrorCodes& aErrorCode);
+
+private:
+  std::unordered_map<mErrorCodes, std::string> mErrors;
 };
