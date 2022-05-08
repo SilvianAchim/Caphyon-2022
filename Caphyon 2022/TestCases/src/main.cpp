@@ -1,3 +1,6 @@
-#include <iostream>
+#include "Tester.h"
 
-int main() { std::cout << "Hello Worldd2\n"; }
+int main() {
+  Tester teser;
+  teser.RunTests();
+}

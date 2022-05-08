@@ -1,7 +1,16 @@
 #pragma once
+#include "pch.h"
 
 class Error {
 public:
-  enum class mErrorCodes { invalidFile, noInput, invalidInput, noShips, unexpectedError };
-  void InterpretError(const Error::mErrorCodes& aErrorCode);
+  enum class mErrorCodes {
+    invalidInputFile,
+    noInput,
+    invalidInput,
+    noShips,
+    unexpectedError,
+    invalidOutputFile,
+    noError
+  };
+  std::string InterpretError(const Error::mErrorCodes& aErrorCode);
 };

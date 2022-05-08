@@ -14,7 +14,7 @@ void Solve::SolveProblem() {
     std::cout << result.GenerateResult();
   } catch (const Error::mErrorCodes& aErrorCode) {
     Error error;
-    error.InterpretError(aErrorCode);
+    std::cout << error.InterpretError(aErrorCode);
   }
 }
 

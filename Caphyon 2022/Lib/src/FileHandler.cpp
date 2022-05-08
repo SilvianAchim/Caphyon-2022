@@ -4,7 +4,7 @@
 FileHandler::FileHandler(
     const std::string& aInputFileName, const std::string& aOutputFileName) {
   mInputFile.open(aInputFileName);
-  if (!mInputFile) { throw Error::mErrorCodes::invalidFile; }
+  if (!mInputFile) { throw Error::mErrorCodes::invalidInputFile; }
   mOutputFile.open(aOutputFileName);
 }
 

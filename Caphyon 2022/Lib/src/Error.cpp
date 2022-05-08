@@ -1,26 +1,22 @@
 #include "Error.h"
 #include "pch.h"
 
-void Error::InterpretError(const Error::mErrorCodes& aErrorCode) {
+std::string Error::InterpretError(const Error::mErrorCodes& aErrorCode) {
   switch (aErrorCode) {
-    case Error::mErrorCodes::invalidFile:
-      std::cout << "Error while opening the input file. File does not exists!";
-      break;
+    case Error::mErrorCodes::invalidInputFile:
+      return "Error while opening the input file. File does not exists!"s;
     case Error::mErrorCodes::invalidInput:
-      std::cout << "Invalid string(planet) length!";
-      break;
+      return "Invalid string(planet) length!"s;
     case Error::mErrorCodes::noInput:
-      std::cout << "Error while reading from the input file. File may be empty or does "
-                   "not contain all the elements!";
-      break;
+      return "Error while reading from the input file. File may be empty or does "
+             "not contain all the elements!"s;
     case Error::mErrorCodes::noShips:
-      std::cout << "The linearo-planet has no ships. Ask Elon Musk to send one ship!";
-      break;
+      return "The linearo-planet has no ships. Ask Elon Musk to send one ship!"s;
     case Error::mErrorCodes::unexpectedError:
-      std::cout << "An unkowned error occured!";
-      break;
+      return "An unkowned error occured!"s;
+    case Error::mErrorCodes::invalidOutputFile:
+      return "Error while writing to the outputfile. It may be deleted!"s;
     default:
-      std::cout << "An unkowned error occured!";
-      break;
+      return "An unkowned error occured!"s;
   }
 }
