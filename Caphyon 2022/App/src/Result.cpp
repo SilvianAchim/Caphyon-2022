@@ -3,7 +3,7 @@
 
 Result::Result(int aLength, std::string aPlanet)
     : mLength(aLength), mLeftPointer(inexistent), mPlanet(aPlanet) {
-  for (const char& c : aPlanet) {
+  for (const char& c : mPlanet) {
     if (c < '0' || c > '9') throw Error::mErrorCodes::invalidInput;
   }
   if (mPlanet.size() != mLength || mLength <= 0) throw Error::mErrorCodes::invalidInput;
@@ -13,7 +13,7 @@ Result::Result(int aLength, std::string aPlanet)
 
 long long Result::GenerateResult() {
   long long ans = 0;
-  for (int i = 0; i < mLength; i++) {
+  for (int i = 0; i < mPlanet.size(); i++) {
     if (mPlanet[i] == SHIP) {
       mLeftPointer = mRightPointer;
       mRightPointer = GetNextShip(i + 1);
@@ -35,7 +35,7 @@ long long Result::GenerateResult() {
 }
 
 int Result::GetNextShip(const int& aPos) {
-  for (int i = aPos; i < mLength; i++) {
+  for (int i = aPos; i < mPlanet.size(); i++) {
     if (mPlanet[i] == SHIP) return i;
   }
   return inexistent;

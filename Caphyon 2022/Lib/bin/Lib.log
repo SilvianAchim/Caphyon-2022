@@ -1,4 +1,5 @@
-﻿  Error.cpp
+﻿  pch.cpp
+  Error.cpp
   FileHandler.cpp
   Generating Code...
   Lib.vcxproj -> D:\! Chestii importante\Proiecte Jocuri\Caphyon 2022\Caphyon 2022\debug\Lib.lib
