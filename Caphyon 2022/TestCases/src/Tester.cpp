@@ -1,6 +1,7 @@
 #include "Tester.h"
 #include "TestFileHandler.h"
 #include "TestResult.h"
+#include "TestSolve.h"
 #include "pch.h"
 
 void Tester::RunTests() {
@@ -16,5 +17,7 @@ void Tester::RunTests() {
     std::cout << output;
     return;
   }
+  TestSolve testSolve;
+  output = testSolve.RunTests();
   std::cout << "All tests succesfully passed!";
 }

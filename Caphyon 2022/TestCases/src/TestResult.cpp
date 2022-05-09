@@ -115,7 +115,7 @@ std::string TestResult::ResultTester() {
     return "Test failed: TestResult test 14 | Result returned an error!"s;
   }
   try { // Test 15
-    Result result(-6, "11411");
+    Result result(-6, "11401");
     result.GenerateResult();
     return "Test failed: TestResult test 15 | Result failed to return an error!"s;
   } catch (const Error::mErrorCodes& aErrorCode) {
@@ -160,6 +160,24 @@ std::string TestResult::ResultTester() {
   } catch (const Error::mErrorCodes& aErrorCode) {
     if (aErrorCode != Error::mErrorCodes::invalidInput) {
       return "Test failed: TestResult test 20 | Result returned an unexpected error!"s;
+    }
+  }
+  try { // Test 21
+    Result result(-6, "10#$%1");
+    result.GenerateResult();
+    return "Test failed: TestResult test 21 | Result failed to return an error!"s;
+  } catch (const Error::mErrorCodes& aErrorCode) {
+    if (aErrorCode != Error::mErrorCodes::invalidInput) {
+      return "Test failed: TestResult test 21 | Result returned an unexpected error!"s;
+    }
+  }
+  try { // Test 22
+    Result result(-1, "10#$%1");
+    result.GenerateResult();
+    return "Test failed: TestResult test 22 | Result failed to return an error!"s;
+  } catch (const Error::mErrorCodes& aErrorCode) {
+    if (aErrorCode != Error::mErrorCodes::invalidInput) {
+      return "Test failed: TestResult test 22 | Result returned an unexpected error!"s;
     }
   }
   return VALID;

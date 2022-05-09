@@ -7,6 +7,7 @@ public:
 
 private:
   const std::string VALID = "OK";
+  const std::string randomOutput = "testtttt.test";
   std::string OpenInputFile();
   std::string ReadFromFile();
   std::string WriteToFile();

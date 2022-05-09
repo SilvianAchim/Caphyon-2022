@@ -164,12 +164,14 @@
     <ClCompile Include="src\Tester.cpp" />
     <ClCompile Include="src\TestFileHandler.cpp" />
     <ClCompile Include="src\TestResult.cpp" />
+    <ClCompile Include="src\TestSolve.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bin\pch.h" />
     <ClInclude Include="src\Tester.h" />
     <ClInclude Include="src\TestFileHandler.h" />
     <ClInclude Include="src\TestResult.h" />
+    <ClInclude Include="src\TestSolve.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App\App.vcxproj">

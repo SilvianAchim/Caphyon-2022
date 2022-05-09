@@ -15,7 +15,6 @@ std::string TestFileHandler::RunTests() {
 }
 
 std::string TestFileHandler::OpenInputFile() {
-  std::string randomOutput = "src/TestFiles/testtttt.test";
   try { // Test 1
     FileHandler test("src/TestFiles/testInput0.txt", randomOutput);
     return "Test failed: FileHandler test 1 | FileHandler failed to return an error "
@@ -37,7 +36,6 @@ std::string TestFileHandler::OpenInputFile() {
 }
 
 std::string TestFileHandler::ReadFromFile() {
-  std::string randomOutput = "src/TestFiles/testtttt.test";
   try { // Test3
     FileHandler test("src/TestFiles/testInput1.txt", randomOutput);
     int n;
@@ -107,7 +105,6 @@ std::string TestFileHandler::ReadFromFile() {
 std::string TestFileHandler::WriteToFile() {
   int testInt = 76;
   std::string testString = "7688888888888888";
-  std::string randomOutput = "src/TestFiles/testtttt.test";
   try { // Test 9
     FileHandler test("src/TestFiles/testInput1.txt", "src/TestFiles/testOutput1.txt");
     test.WriteToFile(testInt);
