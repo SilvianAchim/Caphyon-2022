@@ -1,12 +1,1 @@
-﻿  pch.cpp
-  main.cpp
-  Tester.cpp
-  TestFileHandler.cpp
-  TestResult.cpp
-  TestSolve.cpp
-  Generating Code...
-TestResult.obj : error LNK2019: unresolved external symbol "public: __cdecl Result::Result(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Result@@QEAA@HV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl TestResult::ResultTester(void)" (?ResultTester@TestResult@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-TestResult.obj : error LNK2019: unresolved external symbol "public: __int64 __cdecl Result::GenerateResult(void)" (?GenerateResult@Result@@QEAA_JXZ) referenced in function "private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl TestResult::ResultTester(void)" (?ResultTester@TestResult@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-TestSolve.obj : error LNK2019: unresolved external symbol "public: __cdecl Solve::Solve(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Solve@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z) referenced in function "public: __cdecl `private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl TestSolve::SolveTester(void)'::`3'::<lambda_1>::operator()(void)const " (??R<lambda_1>@?2??SolveTester@TestSolve@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ@QEBA@XZ)
-TestSolve.obj : error LNK2019: unresolved external symbol "public: void __cdecl Solve::SolveProblem(void)" (?SolveProblem@Solve@@QEAAXXZ) referenced in function "public: __cdecl `private: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl TestSolve::SolveTester(void)'::`3'::<lambda_1>::operator()(void)const " (??R<lambda_1>@?2??SolveTester@TestSolve@@AEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ@QEBA@XZ)
-..\debug\TestCases.exe : fatal error LNK1120: 4 unresolved externals
+﻿  TestCases.vcxproj -> D:\! Chestii importante\Proiecte Jocuri\Caphyon 2022\Caphyon 2022\debug\TestCases.exe

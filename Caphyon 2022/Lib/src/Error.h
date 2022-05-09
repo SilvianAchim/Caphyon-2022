@@ -8,8 +8,7 @@ public:
     invalidInput,
     noShips,
     unexpectedError,
-    invalidOutputFile,
-    noError
+    invalidOutputFile
   };
   Error();
   std::string InterpretError(const mErrorCodes& aErrorCode);

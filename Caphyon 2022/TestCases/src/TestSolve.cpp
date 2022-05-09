@@ -17,7 +17,7 @@ std::string TestSolve::SolveTester() {
     FileHandler file("src/TestFiles/testSolve1OUT.txt", randomOutput);
     long long result;
     file.ReadFromFile(result);
-    if (result != 10) return "Test failed : TestSolve test 1 | Wrong Answer!"s;
+    if (result != 10LL) return "Test failed : TestSolve test 1 | Wrong Answer!"s;
   } catch (const Error::mErrorCodes&) {
     return "Test failed: TestSolve test 1 | Solve returned an unexpected error!"s;
   }

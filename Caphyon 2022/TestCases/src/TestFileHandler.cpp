@@ -21,16 +21,14 @@ std::string TestFileHandler::OpenInputFile() {
            "while opening an unexisted file!"s;
   } catch (const Error::mErrorCodes& aErrorCode) {
     if (aErrorCode != Error::mErrorCodes::invalidInputFile) {
-      return "Test failed: FileHandler test 1 | FileHandler returned an unexpected error "
-             "while opening the input file!"s;
+      return "Test failed: FileHandler test 1 | FileHandler returned an unexpected error!"s;
     }
   }
   try { // Test 2
     FileHandler test("src/TestFiles/testInput1.txt", randomOutput);
-  } catch (const Error::mErrorCodes& aErrorCode) {
-    if (aErrorCode != Error::mErrorCodes::noError)
-      return "Test failed: FileHandler test2 | FileHandler returned an error while "
-             "opening a valid file!"s;
+  } catch (const Error::mErrorCodes&) {
+    return "Test failed: FileHandler test2 | FileHandler returned an error while "
+           "opening a valid file!"s;
   }
   return VALID;
 }
@@ -52,11 +50,9 @@ std::string TestFileHandler::ReadFromFile() {
     FileHandler test("src/TestFiles/testInput2.txt", randomOutput);
     int n;
     test.ReadFromFile(n);
-  } catch (const Error::mErrorCodes& aErrorCode) {
-    if (aErrorCode != Error::mErrorCodes::noError)
-      return "Test failed: FileHandler test4 | FileHandler returned an error while "
-             "reading "
-             "from a valid file!"s;
+  } catch (const Error::mErrorCodes&) {
+    return "Test failed: FileHandler test4 | FileHandler returned an error while "
+           "reading from a valid file!"s;
   }
   try { // Test 5
     FileHandler test("src/TestFiles/testInput2.txt", randomOutput);
@@ -66,8 +62,7 @@ std::string TestFileHandler::ReadFromFile() {
     return "Test failed: FileHandler test 5 | FileHandler failed to return an error!"s;
   } catch (const Error::mErrorCodes& aErrorCode) {
     if (aErrorCode != Error::mErrorCodes::invalidInput) {
-      return "Test failed: FileHandler test 5 | FileHandler returned an unexpected error "
-             "while reading from the input file!"s;
+      return "Test failed: FileHandler test 5 | FileHandler returned an unexpected error!"s;
     }
   }
   try { // Test 6
@@ -76,10 +71,9 @@ std::string TestFileHandler::ReadFromFile() {
     test.ReadFromFile(n);
     std::string s;
     test.ReadFromFile(s);
-  } catch (const Error::mErrorCodes& aErrorCode) {
-    if (aErrorCode != Error::mErrorCodes::noError)
-      return "Test failed: FileHandler test 6 | FileHandler returned an error while "
-             "reading from a valid file!"s;
+  } catch (const Error::mErrorCodes&) {
+    return "Test failed: FileHandler test 6 | FileHandler returned an error while "
+           "reading from a valid file!"s;
   }
   try { // Test 7
     FileHandler test("src/TestFiles/testInput4.txt", randomOutput);
@@ -108,18 +102,16 @@ std::string TestFileHandler::WriteToFile() {
   try { // Test 9
     FileHandler test("src/TestFiles/testInput1.txt", "src/TestFiles/testOutput1.txt");
     test.WriteToFile(testInt);
-  } catch (const Error::mErrorCodes& aErrorCode) {
-    if (aErrorCode != Error::mErrorCodes::noError)
-      return "Test failed: FileHandler test 9 | FileHandler returned an error while "
-             "writing to a valid file!"s;
+  } catch (const Error::mErrorCodes&) {
+    return "Test failed: FileHandler test 9 | FileHandler returned an error while "
+           "writing to a valid file!"s;
   }
   try { // Test 10
     FileHandler test("src/TestFiles/testInput1.txt", "src/TestFiles/testOutput2.txt");
     test.WriteToFile(testString);
-  } catch (const Error::mErrorCodes& aErrorCode) {
-    if (aErrorCode != Error::mErrorCodes::noError)
-      return "Test failed: FileHandler test 10 | FileHandler returned an error while "
-             "writing to a valid file!"s;
+  } catch (const Error::mErrorCodes&) {
+    return "Test failed: FileHandler test 10 | FileHandler returned an error while "
+           "writing to a valid file!"s;
   }
   try { // Test 11
     FileHandler test("src/TestFiles/testOutput1.txt", randomOutput);
@@ -128,10 +120,9 @@ std::string TestFileHandler::WriteToFile() {
     if (input != testInt) {
       return "Test failed: FileHandler test 11 | FileHandler failed to output the desired value!"s;
     }
-  } catch (const Error::mErrorCodes& aErrorCode) {
-    if (aErrorCode != Error::mErrorCodes::noError)
-      return "Test failed: FileHandler test 11 | FileHandler returned an error while "
-             "reading from a valid file!"s;
+  } catch (const Error::mErrorCodes&) {
+    return "Test failed: FileHandler test 11 | FileHandler returned an error while "
+           "reading from a valid file!"s;
   }
   try { // Test 12
     FileHandler test("src/TestFiles/testOutput2.txt", randomOutput);
@@ -140,10 +131,9 @@ std::string TestFileHandler::WriteToFile() {
     if (input != testString) {
       return "Test failed: FileHandler test 12 | FileHandler failed to output the desired value!"s;
     }
-  } catch (const Error::mErrorCodes& aErrorCode) {
-    if (aErrorCode != Error::mErrorCodes::noError)
-      return "Test failed: FileHandler test 12 | FileHandler returned an error while "
-             "reading from a valid file!"s;
+  } catch (const Error::mErrorCodes&) {
+    return "Test failed: FileHandler test 12 | FileHandler returned an error while "
+           "reading from a valid file!"s;
   }
   return VALID;
 }

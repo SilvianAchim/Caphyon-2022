@@ -6,6 +6,6 @@ public:
 
 private:
   const std::string VALID = "OK";
-  const std::string randomOutput = "src/TestFilestesttttt.test";
+  const std::string randomOutput = "src/TestFiles/testtttt.test";
   std::string SolveTester();
 };

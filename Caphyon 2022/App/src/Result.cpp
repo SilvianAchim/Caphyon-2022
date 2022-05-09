@@ -2,7 +2,7 @@
 #include "Error.h"
 
 Result::Result(int aLength, std::string aPlanet)
-    : mLength(aLength), mLeftPointer(INT_MIN), mPlanet(aPlanet) {
+    : mLength(aLength), mLeftPointer(inexistent), mPlanet(aPlanet) {
   for (const char& c : aPlanet) {
     if (c < '0' || c > '9') throw Error::mErrorCodes::invalidInput;
   }
@@ -18,12 +18,11 @@ long long Result::GenerateResult() {
       mLeftPointer = mRightPointer;
       mRightPointer = GetNextShip(i + 1);
     } else {
-      if (mLeftPointer != inexistent && mLeftPointer != INT_MIN &&
-          mRightPointer != inexistent) {
+      if (mLeftPointer != inexistent && mRightPointer != inexistent) {
         ans += std::min(
             (long long)((mRightPointer - i) * (mPlanet[i] - '0')),
             (long long)((i - mLeftPointer) * (mPlanet[i] - '0')));
-      } else if (mLeftPointer != inexistent && mLeftPointer != INT_MIN) {
+      } else if (mLeftPointer != inexistent) {
         ans += (long long)((i - mLeftPointer) * (mPlanet[i] - '0'));
       } else if (mRightPointer != inexistent) {
         ans += (long long)((mRightPointer - i) * (mPlanet[i] - '0'));

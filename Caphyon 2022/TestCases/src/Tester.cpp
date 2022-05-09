@@ -23,5 +23,5 @@ void Tester::RunTests() {
     std::cout << output;
     return;
   }
-  std::cout << "All tests succesfully passed!";
+  std::cout << "All tests successfully passed!";
 }
