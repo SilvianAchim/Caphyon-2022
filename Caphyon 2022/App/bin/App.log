@@ -1,6 +1,6 @@
-﻿  Result.cpp
+﻿  pch.cpp
+  Result.cpp
   Solve.cpp
   main.cpp
   Generating Code...
-  LINK : ..\debug\App.exe not found or not built by the last incremental link; performing full link
   App.vcxproj -> D:\! Chestii importante\Proiecte Jocuri\Caphyon 2022\Caphyon 2022\debug\App.exe

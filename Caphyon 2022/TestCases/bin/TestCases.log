@@ -1,1 +1,8 @@
-﻿  TestCases.vcxproj -> D:\! Chestii importante\Proiecte Jocuri\Caphyon 2022\Caphyon 2022\debug\TestCases.exe
+﻿  pch.cpp
+  main.cpp
+  Tester.cpp
+  TestFileHandler.cpp
+  TestResult.cpp
+  TestSolve.cpp
+  Generating Code...
+  TestCases.vcxproj -> D:\! Chestii importante\Proiecte Jocuri\Caphyon 2022\Caphyon 2022\debug\TestCases.lib
