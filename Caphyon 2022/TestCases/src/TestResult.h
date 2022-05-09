@@ -7,4 +7,5 @@ public:
 
 private:
   const std::string VALID = "OK";
+  std::string ResultTester();
 };

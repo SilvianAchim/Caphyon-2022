@@ -5,7 +5,6 @@ class Error {
 public:
   enum class mErrorCodes {
     invalidInputFile,
-    noInput,
     invalidInput,
     noShips,
     unexpectedError,

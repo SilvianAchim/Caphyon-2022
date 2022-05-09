@@ -3,8 +3,11 @@
 
 Result::Result(int aLength, std::string aPlanet)
     : mLength(aLength), mLeftPointer(INT_MIN), mPlanet(aPlanet) {
+  for (const char& c : aPlanet) {
+    if (c < '0' || c > '9') throw Error::mErrorCodes::invalidInput;
+  }
+  if (mPlanet.size() != mLength || mLength <= 0) throw Error::mErrorCodes::invalidInput;
   mRightPointer = GetNextShip(0);
-  if (mPlanet.size() != mLength) throw Error::mErrorCodes::invalidInput;
   if (mRightPointer == inexistent) throw Error::mErrorCodes::noShips;
 }
 
