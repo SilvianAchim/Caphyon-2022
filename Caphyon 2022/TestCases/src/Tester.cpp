@@ -19,5 +19,9 @@ void Tester::RunTests() {
   }
   TestSolve testSolve;
   output = testSolve.RunTests();
+  if (output != VALID) {
+    std::cout << output;
+    return;
+  }
   std::cout << "All tests succesfully passed!";
 }

@@ -11,6 +11,7 @@ void Solve::SolveProblem() {
   try {
     ReadInput();
     Result result(mLength, mPlanet);
+    //std::cout << result.GenerateResult();
     mFileHandler->WriteToFile(result.GenerateResult());
   } catch (const Error::mErrorCodes& aErrorCode) {
     Error error;
